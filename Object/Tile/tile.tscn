@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://bn0bear4r3cq5"]
+
+[node name="Tile" type="CSGBox3D" unique_id=329829198]
+size = Vector3(1, 0.15625, 1)
