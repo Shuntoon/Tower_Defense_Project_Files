@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dgj74cjiprqdp"]
 
 [ext_resource type="PackedScene" uid="uid://bn0bear4r3cq5" path="res://Object/Tile/tile.tscn" id="1_iti4p"]
+[ext_resource type="PackedScene" uid="uid://q6qa276yvsvv" path="res://Object/EnemyPathFollow/enemy_path_follow.tscn" id="2_dtjkg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dtjkg"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -23,6 +24,13 @@ albedo_color = Color(0.15976459, 1, 0.105409205, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iti4p"]
 albedo_color = Color(0.77621365, 0.08018322, 0.061400916, 1)
+
+[sub_resource type="Curve3D" id="Curve3D_dtjkg"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15.27, 0, 0, 0, 0, 0, 0, 5.015, 0, 15.27, 0, 0, 0, 0, 0, 0, 5.015, 0, -0.85, 0, 0, 0, 0, 0, 0, 11.25, 0, -0.85, 0, 0, 0, 0, 0, 0, 11.25, 0, 7.655, 0, 0, 0, 0, 0, 0, 8.63, 0, 7.655, 0, 0, 0, 0, 0, 0, 8.63, 0, 15.14, 0, 0, 0, 0, 0, 0, 16.21, 0, 15.14, 0, 0, 0, 0, 0, 0, 16.21, 0, 0.09),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 10
 
 [node name="TestLevel" type="Node3D" unique_id=1531510339]
 
@@ -654,3 +662,19 @@ material = SubResource("StandardMaterial3D_iti4p")
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1413172629]
 transform = Transform3D(-2.1855692e-08, -0.86602545, 0.49999997, -3.7855173e-08, 0.49999997, 0.86602545, -1, 1.7763568e-15, -4.371139e-08, 26.986423, 28.325184, -9.705246)
 fov = 35.0
+
+[node name="EnemyPath" type="Path3D" parent="." unique_id=1022966580]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25, 0.30995607, -16.5)
+curve = SubResource("Curve3D_dtjkg")
+
+[node name="EnemyPathFollow" parent="EnemyPath" unique_id=781588259 instance=ExtResource("2_dtjkg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.0149994, 0, 12.57213)
+progress = 22.983131
+
+[node name="EnemyPathFollow2" parent="EnemyPath" unique_id=25212185 instance=ExtResource("2_dtjkg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.0149994, 0, 11.510918)
+progress = 22.983131
+
+[node name="EnemyPathFollow3" parent="EnemyPath" unique_id=1308860436 instance=ExtResource("2_dtjkg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.0149994, 0, 13.846239)
+progress = 22.983131

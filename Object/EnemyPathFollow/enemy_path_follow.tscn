@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://q6qa276yvsvv"]
+
+[ext_resource type="Script" uid="uid://gnx5p4byh7ww" path="res://Object/EnemyPathFollow/enemy_path_follow.gd" id="1_sg46t"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ue6jo"]
+albedo_color = Color(0.46613848, 0, 0.66441286, 1)
+
+[node name="EnemyPathFollow" type="PathFollow3D" unique_id=781588259]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+progress = 41.94002
+loop = false
+script = ExtResource("1_sg46t")
+
+[node name="Enemy" type="Node3D" parent="." unique_id=601308873]
+
+[node name="Mesh" type="CSGBox3D" parent="Enemy" unique_id=1218813982]
+size = Vector3(0.5, 0.5, 0.5)
+material = SubResource("StandardMaterial3D_ue6jo")
+
+[node name="Mesh2" type="CSGBox3D" parent="Enemy" unique_id=1503439566]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0167955e-08, 0, -0.23261571)
+size = Vector3(0.3, 0.3, 0.3)
+material = SubResource("StandardMaterial3D_ue6jo")
