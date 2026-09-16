@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://gwt6d54nseja"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_elyl1"]
+font_size = 48
+shadow_size = 2
+shadow_color = Color(0, 0, 0, 0.92941177)
+
+[node name="PlayerHUD" type="Control" unique_id=484911369]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1213272726]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="WaveTimerLabel" type="Label" parent="MarginContainer" unique_id=2129634306]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "3"
+label_settings = SubResource("LabelSettings_elyl1")

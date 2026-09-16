@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dryqh37gwaktt" path="res://Managers/wave_manager.gd" id="1_eglq2"]
 [ext_resource type="PackedScene" uid="uid://bn0bear4r3cq5" path="res://Object/Tile/tile.tscn" id="1_iti4p"]
+[ext_resource type="PackedScene" uid="uid://gwt6d54nseja" path="res://UI/PlayerHUD/player_hud.tscn" id="1_rsyfn"]
+[ext_resource type="Script" uid="uid://xhji1e2hdui2" path="res://UI/PlayerHUD/player_hud.gd" id="2_rsyfn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dtjkg"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -34,10 +36,16 @@ point_count = 10
 
 [node name="TestLevel" type="Node3D" unique_id=1531510339]
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2013737330]
+
+[node name="PlayerHUD" parent="CanvasLayer" unique_id=484911369 instance=ExtResource("1_rsyfn")]
+script = ExtResource("2_rsyfn")
+
 [node name="WaveManager" type="Node" parent="." unique_id=372038893]
 script = ExtResource("1_eglq2")
 
 [node name="WaveTimer" type="Timer" parent="WaveManager" unique_id=1286645015]
+unique_name_in_owner = true
 wait_time = 3.0
 autostart = true
 
@@ -668,7 +676,7 @@ material = SubResource("StandardMaterial3D_iti4p")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1413172629]
 transform = Transform3D(-2.1855692e-08, -0.86602545, 0.49999997, -3.7855173e-08, 0.49999997, 0.86602545, -1, 1.7763568e-15, -4.371139e-08, 26.986423, 28.325184, -9.705246)
-fov = 35.0
+fov = 38.0
 
 [node name="EnemyPath" type="Path3D" parent="." unique_id=1022966580]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25, 0.30995607, -16.5)
