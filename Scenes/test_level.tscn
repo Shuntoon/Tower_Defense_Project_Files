@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bn0bear4r3cq5" path="res://Object/Tile/tile.tscn" id="1_iti4p"]
 [ext_resource type="PackedScene" uid="uid://gwt6d54nseja" path="res://UI/PlayerHUD/player_hud.tscn" id="1_rsyfn"]
 [ext_resource type="Script" uid="uid://xhji1e2hdui2" path="res://UI/PlayerHUD/player_hud.gd" id="2_rsyfn"]
+[ext_resource type="PackedScene" uid="uid://q5subcqy3gox" path="res://Object/BasicTurret/basic_turret.tscn" id="5_7w7ni"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dtjkg"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -681,5 +682,8 @@ fov = 38.0
 [node name="EnemyPath" type="Path3D" parent="." unique_id=1022966580]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25, 0.30995607, -16.5)
 curve = SubResource("Curve3D_dtjkg")
+
+[node name="BasicTurret" parent="." unique_id=912269325 instance=ExtResource("5_7w7ni")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.5, 0, -12.5)
 
 [connection signal="timeout" from="WaveManager/WaveTimer" to="WaveManager" method="_on_wave_timer_timeout"]
